@@ -4,6 +4,7 @@ README.txt
 development.ini
 production.ini
 setup.py
+test.ini
 myApp.egg-info/PKG-INFO
 myApp.egg-info/SOURCES.txt
 myApp.egg-info/dependency_links.txt
@@ -12,6 +13,8 @@ myApp.egg-info/not-zip-safe
 myApp.egg-info/requires.txt
 myApp.egg-info/top_level.txt
 myapp/__init__.py
+myapp/initialize_db.py
+myapp/models.py
 myapp/tests.py
 myapp/views.py
 myapp/static/pyramid-16x16.png

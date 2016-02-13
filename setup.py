@@ -13,6 +13,8 @@ requires = [
     'pyramid_chameleon',
     'pyramid_debugtoolbar',
     'waitress',
+    'sqlalchemy',
+    'zope.sqlalchemy'
     ]
 
 setup(name='myApp',
@@ -38,5 +40,7 @@ setup(name='myApp',
       entry_points="""\
       [paste.app_factory]
       main = myapp:main
+      [console_scripts]
+      initialize_myapp_db = myapp.initialize_db:main
       """,
       )
