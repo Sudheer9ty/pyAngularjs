@@ -1,6 +1,4 @@
 from pyramid.view import view_config
-from .models import User, DBSession
-
 
 @view_config(route_name='home', renderer='templates/mytemplate.pt')
 def my_view(request):
@@ -11,7 +9,6 @@ def  add_users(request):
     list =[]
     if request.POST:
         formdict = dict(request.POST)
-        DBSession.add(User(formdict['name'], formdict['fullname'], formdict['address']))
     for item in User.by_name():
         dicti = {'name':item.name, 'fullname':item.fullname, 'address':item.address }
         list.append(dicti)
